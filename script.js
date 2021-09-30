@@ -6,9 +6,9 @@ document.querySelector("#email-form").addEventListener("submit", function(event)
     const email = emailForm.value
 
     console.log(email)
-    
-    // Add Rudder Event Handler Here:
-    rudderanalytics.identify(email, { favorite_team: "Arsenal" })
+
+    // Make RudderStack Identify Call
+    rudderanalytics.idenitfy(email, { favorite_team: "Arsenal" })
 
     emailForm.value = ""
 } )
