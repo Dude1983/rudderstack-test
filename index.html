@@ -1,0 +1,44 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Start RudderStack Snippet -->
+    
+    <script>
+        rudderanalytics = window.rudderanalytics = [];
+    
+        var  methods = [
+            "load",
+            "page",
+            "track",
+            "identify",
+            "alias",
+            "group",
+            "ready",
+            "reset",
+            "getAnonymousId",
+            "setAnonymousId"
+        ];
+    
+        for (var i = 0; i < methods.length; i++) {
+              var method = methods[i];
+              rudderanalytics[method] = function (methodName) {
+                    return function () {
+                          rudderanalytics.push([methodName].concat(Array.prototype.slice.call(arguments)));
+                    };
+                  }(method);
+        }
+        rudderanalytics.load("1w07ZL0v0dqZnCenuf31IBq5VXL", "https://walvoordbxzie.dataplane.rudderstack.com");
+        //For example,
+        //rudderanalytics.load("write_key_from_source", "dataplane_from_rudderapp");
+        rudderanalytics.page();
+    </script>
+    
+    <script src="https://cdn.rudderlabs.com/v1/rudder-analytics.min.js"></script>
+
+    <!-- End RudderStack Snippet -->
+    
+    <title>RudderStack in 5</title>
+</head>
